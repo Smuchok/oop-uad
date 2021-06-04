@@ -1,0 +1,17 @@
+/* Шрифт */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+html,
+h1,h2,h3,h4,h5,h6,a {
+    font-family: "Raleway";
+}
+
+.foot {
+    background-color: #f97400f6;
+}
+.text {
+    color: aliceblue;
+}
+li:hover, li a:hover {
+    color: aliceblue;
+    transform: scale(1.04);
+}

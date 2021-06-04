@@ -1,0 +1,62 @@
+{% extends 'main/body.html' %}
+
+{% block title %}
+Додати новий блог
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        <span><h1>Додати новий блог</h1></span>
+                    </div>
+                    <div class="col-2">
+                        <a href="#">
+                            <button type="submit" class="btn btn-success">Опублікувати</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container">
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-xs-12 col-sm-12 col-md-6"> -->
+
+                        <form method="post">
+                            {% csrf_token %}
+                            <span>{{ error }}</span>
+
+                            <!-- <input type="text" placeholder="Назва нового блогу" class=form-control><br> -->
+                            {{ form.title }} <br>
+                            <!-- <input type="text" placeholder="Опис" class=form-control><br> -->
+                            {{ form.anons }} <br>
+                            <!-- <textarea name="" id="" cols="30" rows="10" placeholder="Текст" class="form-control"></textarea><br> -->
+                            {{ form.full_text }} <br>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <!-- <input type="date" class="form-control"> -->
+                                    {{ form.date }}
+                                </div>
+                                <div class="col-6">
+                                    <!-- <input type="time" class="form-control"> -->
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <button type="submit" class="btn btn-success btn-fluid">Опублікувати</button>
+
+                        </form>
+
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

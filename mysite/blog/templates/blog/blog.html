@@ -1,0 +1,48 @@
+{% extends 'main/body.html' %}
+
+{% block title %}
+Блог
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        <span><h1>Блоги</h1></span>
+                    </div>
+                    <div class="col-2">
+                        <a href="{% url 'add_blog' %}">
+                            <button class="btn btn-info">Додати</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container">
+                <!-- <div class="row"> -->
+                    <!-- <div class="col-xs-12 col-sm-12 col-md-6"> -->
+                        {% if blogs %}
+                            {% for i in blogs %}
+                                <div class="alert alert-warning">
+                                    <a href="{% url 'blogInDetails' i.id %}" class="">
+                                        <h3>{{ i.title }}</h3>
+                                    </a>
+                                    <p>{{ i.anons }}</p>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>Немає блогів</p>
+                        {% endif %}
+            
+                    <!-- </div> -->
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

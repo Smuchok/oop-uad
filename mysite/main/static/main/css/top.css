@@ -1,0 +1,34 @@
+/* Шрифт */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+html,
+h1,h2,h3,h4,h5,h6,a {
+    font-family: "Raleway";
+}
+
+/* ШАПКА */
+.headnav {
+    background-color: #f97400f6	;
+}
+.nabvar-brand img {
+    width: 150px;
+}
+.navbar-nav li {
+    padding-right: 25px;
+}
+.navbar-nav li a {
+    color: #F7F9F8;
+}
+.navbar-nav li a:hover {
+    background-color: #F7F9F8;
+    color: #F97300	;
+    transform: scale(1.1);
+}
+header .navbar-toggler {
+    background-color: #EDEDE5;
+}
+header .tagglericon {
+    color: #F97300;
+}
+header .tagglericon:active {
+    color: #019097;
+}
